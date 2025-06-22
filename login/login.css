@@ -1,0 +1,199 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page layout - flex container spanning full viewport height */
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #033F63;
+}
+
+/* Left side with background image and welcome message */
+.image-side {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Container for logo and welcome text overlay */
+.welcome-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+/* Styling for the logo image */
+.welcome-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Full-screen background image styling */
+.login-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Right side with login form */
+.login-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.signin-header {
+    margin: 0 auto 2rem auto; 
+    text-align: center;
+}
+
+.signin-header h2 {
+    color: #FEDC97;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #FEDC97;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #B5B682;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #9e9f6f;
+}
+
+.guest-btn {
+    background-color: white;
+    color: #B5B682;
+    border: 2px solid #B5B682;
+}
+
+.guest-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Divider between buttons */
+.divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #B5B682;
+    position: relative;
+}
+
+/* Divider lines before/after "or" text */
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #B5B682;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+input.error {
+    border: 2px solid #ff6b6b;
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff6b6b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    min-height: 1rem;
+    display: block;
+}
+
+.login-btn:disabled {
+    background-color: #cccccc;
+}
+
+/* Mobile responsiveness (screens < 768px wide) */
+@media (max-width: 768px) {
+    /* Stack columns vertically on mobile */
+    body {
+        flex-direction: column;
+    }
+    /* Reduce height of image section */
+    .image-side {
+        height: 30vh;
+        flex: none;
+    }
+    /* Adjust form side padding and width */
+    .login-side {
+        padding: 2rem;
+        width: 70%; 
+    }
+    /* Slightly smaller logo on mobile */
+    .welcome-logo {
+        width: 80px;
+    }
+    /* Smaller heading on mobile */
+    h1 {
+        font-size: 2rem;
+    }
+}

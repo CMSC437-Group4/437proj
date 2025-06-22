@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Left side with background image and welcome content -->
+    <div class="image-side">
+        <img src="../assets/login.png" alt="welcome image" class="login-image">
+        <div class="welcome-overlay">
+            <img src="../assets/logo.png" alt="Pocket Pilot Logo" class="welcome-logo">
+            <h1>Welcome to Pocket Pilot!</h1>
+        </div>
+    </div>
+    <!-- Right side with login form -->
+    <div class="login-side">
+        <div class="signin-header">
+            <h2>Sign In</h2>
+        </div>
+        <!-- Login form -->
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <div class="error-message"></div>
+            </div>
+            <button type="submit" class="button login-btn">Login</button>
+        </form>
+        <!-- Divider between login and guest options -->
+        <div class="divider">or</div>
+        <!-- Guest access button -->
+        <button class="button guest-btn" id="guestBtn">Continue as Guest</button>
+    </div>
+    
+    <!-- JavaScript for form handling -->
+    <script src="login.js"></script>
+</body>
+</html>
