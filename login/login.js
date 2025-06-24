@@ -1,3 +1,4 @@
+// Wait for DOM to be fully loaded before executing JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Get form elements
     const form = document.getElementById('loginForm');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validate email
         if (!email.value) {
             emailError.textContent = 'Email is required';
+            emailError.style.display = 'block';
             email.classList.add('error');
             isValid = false;
         } else if (!email.value.includes('@') || !email.value.includes('.')) {
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validate password
         if (!password.value) {
             passwordError.textContent = 'Password is required';
+            passwordError.style.display = 'block';
             password.classList.add('error');
             isValid = false;
         } else if (password.value.length < 6) {
