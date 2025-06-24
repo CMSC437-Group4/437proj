@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Phone</title>
+        <link rel="stylesheet" href="/shared/styles.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome (for navbar) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <nav class="navbar sidebar navbar-expand-lg navbar-light bg-info flex-column vh-100 p-0 position-fixed">
+                <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarNav" aria-controls="sidebarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse show" id="sidebarNav">
+                    <ul class="navbar-nav flex-column w-100">
+                    <li class="nav-item text-center my-3">
+                        <a class="nav-link text-white" href="/index.html">
+                        <i class="fas fa-home fa-2x"></i><br>
+                        Home
+                        </a>
+                    </li>
+                    <li class="nav-item text-center my-3">
+                        <a class="nav-link text-white" href="/entertainment/index.html">
+                        <i class="fas fa-film fa-2x"></i><br>
+                        Entertainment
+                        </a>
+                    </li>
+                    <li class="nav-item text-center my-3">
+                        <a class="nav-link text-white" href="/shopping/index.html">
+                        <i class="fas fa-shopping-cart fa-2x"></i><br>
+                        Shopping
+                        </a>
+                    </li>
+                    <li class="nav-item text-center my-3">
+                        <a class="nav-link text-white" href="/phone/index.html">
+                        <i class="fas fa-phone fa-2x"></i><br>
+                        Phone
+                        </a>
+                    </li>
+                    <li class="nav-item text-center my-3">
+                        <a class="nav-link text-white" href="/flightInfo/index.html">
+                        <i class="fas fa-plane fa-2x"></i><br>
+                        Flight Info
+                        </a>
+                    </li>
+                    <li class="nav-item text-center my-3">
+                        <a class="nav-link text-white" href="/travelTips/index.html">
+                        <i class="fas fa-map-marked-alt fa-2x"></i><br>
+                        Travel Tips
+                        </a>
+                    </li>
+                    <li class="nav-item text-center my-3">
+                        <a class="nav-link text-white" href="/feedback/index.html">
+                        <i class="fas fa-comment fa-2x"></i><br>
+                        Feedback
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="phone d-flex align-items-start justify-content-center">
+                <div class="phone-keypad-container">
+                    <div class="phone-title">PHONE CALL</div>
+                    <div class="phone-number" id="phoneNumber">+1 (234) 567 890</div>
+                    <div class="keypad">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>*</button>
+                        <button>0</button>
+                        <button>#</button>
+                    </div>
+                    <div class="keypad-actions">
+                        <button class="call-btn"><i class="fas fa-phone"></i></button>
+                        <button class="clear-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="phone-info-container ms-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="rate">Rate: $2.5/min</div>
+                            <div class="duration">Duration: 4:22 mins</div>
+                            <div class="cost">Cost: $11.10</div>
+                        </div>
+                        <!-- <div class="profile-info text-end">
+                            <div class="time">10:53pm</div>
+                            <i class="fas fa-user-circle fa-2x"></i>
+                        </div> -->
+                    </div>
+                    <div class="payment-section mt-3">
+                        <div class="payment-title">Payment method</div>
+                        <div>
+                            <input type="radio" id="paypal" name="payment" checked>
+                            <label for="paypal">Pay with PayPal</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="card" name="payment">
+                            <label for="card">Pay with Credit or Debit</label>
+                        </div>
+                        <div class="card-inputs mt-2">
+                            <button class="btn btn-outline-secondary btn-sm me-1">VISA</button>
+                            <button class="btn btn-outline-secondary btn-sm">MASTERCARD</button>
+                            <input type="text" class="form-control mt-2" placeholder="card number">
+                            <div class="d-flex mt-2">
+                                <input type="text" class="form-control me-2" style="width:70px" placeholder="MM/YY">
+                                <input type="text" class="form-control" style="width:70px" placeholder="CW/CVC">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+.phone {
+    margin-left: 120px; /* adjust for sidebar width */
+    padding: 40px 0 0 0;
+    min-height: 100vh;
+    background: #f8f9fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.phone-keypad-container {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 32px 24px 32px;
+    min-width: 320px;
+    margin-right: 32px;
+}
+.phone-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+.phone-number {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 18px;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-gap: 12px;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+.keypad button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid #bbb;
+    background: #f4f4f4;
+    transition: background 0.2s;
+}
+.keypad button:hover {
+    background: #e0e0e0;
+}
+.keypad-actions {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.call-btn, .clear-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.call-btn {
+    background: #4caf50;
+}
+.clear-btn {
+    background: #e53935;
+}
+.phone-info-container {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 32px 32px 24px 32px;
+    min-width: 340px;
+}
+.rate, .duration, .cost {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+/* .profile-info .time {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+} */
+.payment-section {
+    margin-top: 18px;
+}
+.payment-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.card-inputs input[type="text"] {
+    margin-bottom: 6px;
+}

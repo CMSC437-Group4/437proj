@@ -12,6 +12,36 @@ h2, body, label, textarea, .button, .divider, .success-message {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* NAVBAR STYLES */
+.sidebar {
+    width: 200px;
+    min-height: 100vh;
+}
+.content {
+    margin-left: 200px; 
+    padding: 2rem;
+}
+@media (max-width: 991.98px) {
+    .content {
+        margin-left: 0;
+    }
+}
+.sidebar .nav-link {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+}
+
+.sidebar .fa-2x {
+    font-size: clamp(2rem, 4vw, 3rem);   /* Responsive icon size */
+}
+
+@media (min-width: 1600px) {
+    .sidebar .nav-item {
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+    }
+}
+/* END NAVBAR */
+
 * {
     margin: 0;
     padding: 0;
