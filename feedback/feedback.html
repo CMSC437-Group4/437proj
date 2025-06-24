@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Flight Feedback</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <!-- Main feedback container -->
+    <div class="feedback-container">
+        <h1>In-Flight Feedback</h1>
+        <!-- Feedback form -->
+        <form id="feedbackForm" novalidate>
+            <!-- Issue category selection -->
+            <div class="form-group">
+                <label for="category">Issue Category*</label>
+                <select id="category" required>
+                    <option value="">-- Please select --</option>
+                    <option value="cleanliness">Cleanliness</option>
+                    <option value="service">Crew Service</option>
+                    <option value="technical">Technical Issue</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error-message" id="categoryError">Please select a category</div>
+            </div>
+            <!-- Star rating component -->
+            <div class="form-group">
+                <label>Overall Rating*</label>
+                <div class="rating-container">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+                <div class="rating-text" id="ratingText">Please rate your experience</div>
+                <!-- Stores selected rating -->
+                <input type="hidden" id="rating" value="0">
+            </div>
+            <!-- Feedback comments -->
+            <div class="form-group">
+                <label for="comments">Your Feedback*</label>
+                <textarea id="comments" placeholder="Please describe your experience..." required></textarea>
+                <div class="error-message" id="commentsError">Please enter your feedback</div>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class="button" id="submitBtn">Submit Feedback</button>
+        </form>
+        <!-- Success message (hidden until submission) -->
+        <div class="success-message" id="successMessage">
+            Thank you! Your feedback has been submitted to the crew.
+        </div>
+    </div>
+    <script src="feedback.js"></script>
+</body>
+</html>

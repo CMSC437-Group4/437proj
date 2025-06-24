@@ -1,0 +1,97 @@
+/* Main page styling */
+body {
+    background-color: #7C9885;
+    color: white;
+    padding: 20px;
+}
+
+/* Feedback Container */
+.feedback-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #28666E;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form heading style */
+h1 {
+    color: #FEDC97;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Spacing for form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Input field styling */
+select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Larger textarea for comments */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+.button {
+    background-color: #FEDC97;
+    color: white;
+}
+
+.button:hover {
+    background-color: #e2c17d;
+}
+
+/* Success message after submission */
+.success-message {
+    color: #009933;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+/* Star rating container */
+.rating-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+/* Individual star styling */
+.star {
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0 5px;
+}
+
+/* Star hover and active states */
+.star:hover,
+.star.active {
+    color: #ffcc00;
+}
+
+/* Text below star rating */
+.rating-text {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+}
