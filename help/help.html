@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Flight Attendant Assistance</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="help.css">
+</head>
+<body>
+    <!-- Main container for the entire component -->
+    <div class="assistance-container">
+        <h1>How can we help?</h1>
+        <!-- Form section that contains all input elements -->
+        <div id="formSection">
+            <div class="request-form">
+                <!-- Left column - Assistance categories -->
+                <div class="categories-section">
+                    <div class="form-group">
+                        <div class="form-title">What do you need assistance with?</div>
+                        <!-- Checkbox options for assistance types -->
+                        <div class="option-item">
+                            <input type="checkbox" id="general" name="assistance" value="General">
+                            <label for="general">General Assistance (Blanket, Pillow, etc.)</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="food" name="assistance" value="Food">
+                            <label for="food">Food/Drink Request</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="technical" name="assistance" value="Technical">
+                            <label for="technical">Technical Issue</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="medical" name="assistance" value="Medical">
+                            <label for="medical">Medical Assistance</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="other" name="assistance" value="Other">
+                            <label for="other">Other (please specify)</label>
+                        </div>
+                        <!-- Text input that appears when "Other" is selected -->
+                        <textarea id="otherText" class="other-input" placeholder="Please describe your request in detail"></textarea>
+                    </div>
+                </div>
+                 <!-- Right column - Urgency selection -->
+                <div class="urgency-section">
+                    <div class="form-group">
+                        <div class="form-title">How urgent is your request?</div>
+                        <div class="urgency-options">
+                            <!-- Radio button options for urgency levels -->
+                            <div class="urgency-item" data-level="low">
+                                <input type="radio" id="low" name="urgency" value="Low">
+                                <label for="low">Low Priority</label>
+                                <p class="urgency-description">Not time-sensitive</p>
+                            </div>
+                            <div class="urgency-item" data-level="medium">
+                                <input type="radio" id="medium" name="urgency" value="Medium">
+                                <label for="medium">Medium Priority</label>
+                                <p class="urgency-description">Important but not emergency</p>
+                            </div>
+                            <div class="urgency-item" data-level="high">
+                                <input type="radio" id="high" name="urgency" value="High">
+                                <label for="high">High Priority</label>
+                                <p class="urgency-description">Requires immediate attention</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Button group at the bottom of the form -->
+            <div class="button-group">
+                <button id="cancelRequest" class="button cancel-btn">Cancel</button>
+                <button id="submitRequest" class="button submit-btn" disabled>Submit Request</button>
+            </div>
+        </div>
+        <!-- Confirmation message (hidden until form is submitted) -->
+        <div id="confirmationSection" class="confirmation-message">
+            <div class="confirmation-icon">✓</div>
+            <h2>Your Request Has Been Submitted</h2>
+            <p>Flight attendant has been notified and will assist you shortly.</p>
+            <p id="requestDetails"></p>
+        </div>
+    </div>
+    <script src="help.js"></script>
+</body>
+</html>

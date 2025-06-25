@@ -29,7 +29,7 @@ h2, body, label, textarea, .button, .divider, .success-message {
     border-color: #ff3333 !important;
 }
 
-.button {
+.button, .submit-btn {
     border: none;
     padding: 12px;
     border-radius: 4px;
