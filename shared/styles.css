@@ -14,18 +14,24 @@ h2, body, label, textarea, .button, .divider, .success-message {
 
 /* NAVBAR STYLES */
 .sidebar {
-    width: 200px;
+    width: 115px;
+    min-width: 115px;
+    max-width: 115px;
     min-height: 100vh;
+    transition: width 0.3s;
+    z-index: 1040;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #36cdf6 !important; /* match your bg-info */
+    padding: 0;
 }
-.content {
-    margin-left: 200px; 
+
+.content, .phone {
+    margin-left: 115px;
     padding: 2rem;
 }
-@media (max-width: 991.98px) {
-    .content {
-        margin-left: 0;
-    }
-}
+
 .sidebar .nav-link {
     font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
 }
@@ -39,6 +45,26 @@ h2, body, label, textarea, .button, .divider, .success-message {
         margin-top: 1.5vw;
         margin-bottom: 1.5vw;
     }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 56px;
+        min-width: 56px;
+        max-width: 56px;
+        transition: width 0.3s;
+    }
+    .sidebar .navbar-nav {
+        display: none !important;
+    }
+    .sidebar .navbar-toggler {
+        display: block !important;
+    }
+}
+
+.sidebar .navbar-toggler {
+    display: none;
+    margin: 1rem auto;
 }
 /* END NAVBAR */
 
