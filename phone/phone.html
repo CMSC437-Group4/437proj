@@ -6,61 +6,45 @@
         <title>Phone</title>
         <link rel="stylesheet" href="/shared/styles.css">
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="/assets/logo.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Font Awesome (for navbar) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <nav class="navbar sidebar navbar-expand-lg navbar-light bg-info flex-column vh-100 p-0 position-fixed">
-            <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarNav" aria-controls="sidebarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #033F63;">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Company Logo" />
+                Pocket Pilot
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse show" id="sidebarNav">
-                <ul class="navbar-nav flex-column w-100">
-                    <li class="nav-item text-center my-3">
-                        <a class="nav-link text-white" href="/index.html">
-                        <i class="fas fa-home fa-2x"></i><br>
-                        Home
-                        </a>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/entertainment/index.html">Entertainment</a>
                     </li>
-                    <li class="nav-item text-center my-3">
-                        <a class="nav-link text-white" href="/entertainment/index.html">
-                        <i class="fas fa-film fa-2x"></i><br>
-                        Entertainment
-                        </a>
-                    </li>
-                    <li class="nav-item text-center my-3">
-                        <a class="nav-link text-white" href="/shopping/index.html">
-                        <i class="fas fa-shopping-cart fa-2x"></i><br>
-                        Shopping
-                        </a>
-                    </li>
-                    <li class="nav-item text-center my-3">
-                        <a class="nav-link text-white" href="/phone/phone.html">
-                        <i class="fas fa-phone fa-2x"></i><br>
-                        Phone
-                        </a>
-                    </li>
-                    <li class="nav-item text-center my-3">
-                        <a class="nav-link text-white" href="/flightInfo/index.html">
-                        <i class="fas fa-plane fa-2x"></i><br>
-                        Flight Info
-                        </a>
-                    </li>
-                    <li class="nav-item text-center my-3">
-                        <a class="nav-link text-white" href="/travelTips/index.html">
-                        <i class="fas fa-map-marked-alt fa-2x"></i><br>
-                        Travel Tips
-                        </a>
-                    </li>
-                    <li class="nav-item text-center my-3">
-                        <a class="nav-link text-white" href="/feedback/feedback.html">
-                        <i class="fas fa-comment fa-2x"></i><br>
-                        Feedback
-                        </a>
-                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shopping/index.html">Shopping</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/phone/phone.html">Phone</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flightInfo/index.html">Flight Info</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/travelTips/index.html">Travel Tips</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feedback/feedback.html">Feedback</a>
+                    </li>    
                 </ul>
-            </div>
+            </div>  
         </nav>
         <div class="phone d-flex align-items-start justify-content-center">
             <div class="phone-keypad-container">
@@ -92,10 +76,6 @@
                         <div class="duration">Duration: 4:22 mins</div>
                         <div class="cost">Cost: $11.10</div>
                     </div>
-                    <!-- <div class="profile-info text-end">
-                        <div class="time">10:53pm</div>
-                        <i class="fas fa-user-circle fa-2x"></i>
-                    </div> -->
                 </div>
                 <div class="payment-section mt-3">
                     <div class="payment-title">Payment method</div>
@@ -110,7 +90,7 @@
                     <div class="card-inputs mt-2">
                         <button class="btn btn-outline-secondary btn-sm me-1">VISA</button>
                         <button class="btn btn-outline-secondary btn-sm">MASTERCARD</button>
-                        <input type="text" class="form-control mt-2" placeholder="card number">
+                        <input type="text" class="form-control mt-2" placeholder="Ex: 1234 1234 1234 1234">
                         <div class="d-flex mt-2">
                             <input type="text" class="form-control me-2" style="width:70px" placeholder="MM/YY">
                             <input type="text" class="form-control" style="width:70px" placeholder="CW/CVC">

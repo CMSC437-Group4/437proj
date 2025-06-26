@@ -12,62 +12,6 @@ h2, body, label, textarea, .button, .divider, .success-message {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* NAVBAR STYLES */
-.sidebar {
-    width: 160px;
-    min-width: 160px;
-    max-width: 160px;
-    min-height: 100vh;
-    transition: width 0.3s;
-    z-index: 1040;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: #36cdf6 !important;
-    padding: 0;
-}
-
-.content, .phone {
-    margin-left: 140px;
-    padding: 2rem;
-}
-
-.sidebar .nav-link {
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
-}
-
-.sidebar .fa-2x {
-    font-size: clamp(2rem, 4vw, 3rem);   /* Responsive icon size */
-}
-
-@media (min-width: 1600px) {
-    .sidebar .nav-item {
-        margin-top: 1.5vw;
-        margin-bottom: 1.5vw;
-    }
-}
-
-@media (max-width: 600px) {
-    .sidebar {
-        width: 56px;
-        min-width: 56px;
-        max-width: 56px;
-        transition: width 0.3s;
-    }
-    .sidebar .navbar-nav {
-        display: none !important;
-    }
-    .sidebar .navbar-toggler {
-        display: block !important;
-    }
-}
-
-.sidebar .navbar-toggler {
-    display: none;
-    margin: 1rem auto;
-}
-/* END NAVBAR */
-
 * {
     margin: 0;
     padding: 0;
