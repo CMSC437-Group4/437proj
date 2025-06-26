@@ -14,21 +14,21 @@ h2, body, label, textarea, .button, .divider, .success-message {
 
 /* NAVBAR STYLES */
 .sidebar {
-    width: 115px;
-    min-width: 115px;
-    max-width: 115px;
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
     min-height: 100vh;
     transition: width 0.3s;
     z-index: 1040;
     position: fixed;
     left: 0;
     top: 0;
-    background: #36cdf6 !important; /* match your bg-info */
+    background: #36cdf6 !important;
     padding: 0;
 }
 
 .content, .phone {
-    margin-left: 115px;
+    margin-left: 140px;
     padding: 2rem;
 }
 
