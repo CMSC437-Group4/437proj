@@ -3,17 +3,18 @@
 Use this to keep track of where we are
 
 TODO:
-- Entertainment page 
-- Flight info
-- Profile
-- Shopping
-- Travel Tips
+- Entertainment page (Natalie)
+- Flight info (Marielle)
+- Profile (Preston)
+- Shopping (Shayne)
+- Travel Tips (Preston)
+- Dashboard (??)
 
 NEED FIXED:
-- Navbar (Shayne is doing this)
 - Possibly shared/styles.css
 
 FINISHED:
+- Navbar
 - Feedback
 - Help page
 - Login

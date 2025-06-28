@@ -1,0 +1,12 @@
+.content{
+    background-color: #28666E;
+}
+.category-menu{
+    list-style: none;
+    display: inline-flex;
+}
+.category-menu button{
+    margin: 1rem;
+    border-radius: 10%;
+    border: 0.1rem solid red;
+}

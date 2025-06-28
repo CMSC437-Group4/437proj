@@ -1,5 +1,6 @@
 @import url('/shared/styles.css');
 
-.container{
+.content{
     text-align: center;
+    margin: 1rem;
 }
