@@ -1,0 +1,50 @@
+[
+    {"title" : "Stranger Things",
+    "director": "Matt and Ross Duffer",
+    "release year": "2016", 
+    "cast": ["Millie Bobby Brown", "Finn Wolfhard", "Noah Schnapp"],
+    "number of episodes":"34",
+    "rating": "TV-14",
+    "poster": "entertainment/showPosters/Stranger_Things"
+    },
+    {"title" : "Succession",
+    "director": "Jesse Armstrong",
+    "release year": "2018", 
+    "cast": ["Jeremy Strong", "Sarah Snook", "Kieran Culkin"],
+    "number of episodes":"39",
+    "rating": "R",
+    "poster": "entertainment/showPosters/Succession"
+    },
+    {"title" : "The Office",
+    "director": "Ricky Gervais",
+    "release year": "2005", 
+    "cast": ["Steve Carrell", "John Krasinski", "Jenna Fischer"],
+    "number of episodes":"201",
+    "rating": "TV-14",
+    "poster": "entertainment/showPosters/The_Office"
+    },
+    {"title" : "The Sopranos",
+    "director": "David Chase",
+    "release year": "1999", 
+    "cast": ["James Gandolfini", "Michael Imperioli", "Lorraine Bracco"],
+    "number of episodes":"86",
+    "rating": "R",
+    "poster": "entertainment/showPosters/The_Sopranos"
+    },
+    {"title" : "Family Guy",
+    "director": "Seth McFarlane",
+    "release year": "1999", 
+    "cast": ["Seth McFarlane", "Alex Borstein", "Seth Green"],
+    "number of episodes":"435",
+    "rating": "R",
+    "poster": "entertainment/showPosters/Family_Guy"
+    },
+    {"title" : "Phineas and Ferb",
+    "director": "Dan Povenmire and Jeff Marsh",
+    "release year": "", 
+    "cast": ["Dan Povenmire", "Vincent Martella", "Ashley Tisdale"],
+    "number of episodes":"143",
+    "rating": "TV-G",
+    "poster": "entertainment/showPosters/Phineas_And_Ferb"
+    }
+]
