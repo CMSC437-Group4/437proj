@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Information</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="flightInfo.css">
+</head>
+<body>
+    <!-- Main container for all flight information -->
+    <div class="flight-container">
+        <h1>Flight Information</h1>
+        <!-- Tab navigation -->
+        <div class="tab-container">
+            <button class="tab active" data-tab="flight-info">Flight Status</button>
+            <button class="tab" data-tab="announcements">Announcements & Safety</button>
+        </div>
+        <!-- Flight Info Tab -->
+        <div id="flight-info" class="tab-content active">
+            <div class="flight-map">
+                <img src="../assets/flightMap.jpeg" alt="Flight Map" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <!-- Flight metrics (first row) -->
+            <div class="flight-metrics">
+                <div class="metric-card">
+                    <div>Current Altitude</div>
+                    <div class="metric-value" id="altitude">36,000 ft</div>
+                </div>
+                <div class="metric-card">
+                    <div>Ground Speed</div>
+                    <div class="metric-value" id="speed">540 mph</div>
+                </div>
+                <div class="metric-card">
+                    <div>Current Location</div>
+                    <div class="metric-value" id="location">Over Atlantic Ocean</div>
+                </div>
+                <div class="metric-card">
+                    <div>Outside Temperature</div>
+                    <div class="metric-value" id="temperature">62°F</div>
+                </div>
+            </div>
+            <!-- Flight metrics (second row) -->
+            <div class="flight-metrics">
+                <div class="metric-card">
+                    <div>Departure Time</div>
+                    <div class="metric-value">9:30 AM (JFK)</div>
+                </div>
+                <div class="metric-card">
+                    <div>Estimated Arrival</div>
+                    <div class="metric-value" id="eta">3:45 PM (LHR)</div>
+                </div>
+                <div class="metric-card">
+                    <div>Time Remaining</div>
+                    <div class="metric-value" id="time-remaining">3h 15m</div>
+                </div>
+                <div class="metric-card">
+                    <div>Distance Traveled</div>
+                    <div class="metric-value" id="distance">1,842 mi</div>
+                </div>
+            </div>
+        </div>
+        <!-- Announcements & Safety Tab -->
+        <div id="announcements" class="tab-content">
+            <!-- Announcements -->
+            <h2>Announcements</h2>
+            <div class="announcement">
+                <strong>10:00 AM</strong> - Before we take off, we'd like to take a few minutes to walk you through some important safety information. Please give the flight attendants who are demonstrating your full attention.
+            </div>
+            <div class="announcement">
+                <strong>11:30 AM</strong> - Meal service will begin shortly in cabin classes.
+            </div>
+            <div class="announcement urgent" id="urgent-announcement">
+                <strong>URGENT</strong> - Please fasten seatbelts due to expected turbulence.
+            </div>
+            <!-- Safety info with image -->
+            <h2>Safety Information</h2>
+            <div class="safety-container">
+                <div class="safety-text">
+                    <div class="safety-item">
+                        <div class="safety-icon">1</div>
+                        <div>Emergency exits are located at the front, middle, and rear of the aircraft</div>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">2</div>
+                        <div>Life vests are under your seat. Pull to inflate after exiting the aircraft or blow manually</div>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">3</div>
+                        <div>Oxygen masks will drop automatically if needed. Secure yours first before assisting others</div>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">4</div>
+                        <div>In case of smoke or fire, stay low and follow floor lighting to the nearest exit</div>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">5</div>
+                        <div>Stow carry-on items securely in the overhead bin or under the seat in front of you</div>
+                    </div>
+                </div>
+                <div class="safety-image">
+                    <img src="../assets/flightSafety.jpg" alt="Aircraft safety diagram" class="safety-img">
+                    <p class="img-caption">Aircraft safety diagram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="flightInfo.js"></script>
+</body>
+</html>
