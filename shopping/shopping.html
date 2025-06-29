@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="/assets/logo.png">
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js" type="text/babel"></script>
+        <script src="script.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -59,18 +59,111 @@
                     <button>Drinks</button>
                 </li>
             </div>
-            <div class="item-area">
-                <!-- Bootstrap rows and cols -->
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="item-cards">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="item-cards">
+                        <!-- MEAL MENU -->
+                        <div class="meal-menu">
+                            <h1 style="margin-left: 1rem;">Meals</h1>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/burger_n_fries.jpg" class="card-img-top" alt="Cheeseburger with fries" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cheeseburger with Fries</h5>
+                                            <p class="card-text">$11.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/pep_pizza.jpg" class="card-img-top" alt="Pepperoni Pizza" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pepperoni Pizza Slice</h5>
+                                            <p class="card-text">$9.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/nachos.jpg" class="card-img-top" alt="Nachos" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Nachos</h5>
+                                            <p class="card-text">$9.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/hotdog.jpg" class="card-img-top" alt="Hot dog" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hotdog</h5>
+                                            <p class="card-text">$10.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SNACK MENU -->
+                        <div class="snack-menu">
+                            <h1 style="margin-left: 1rem;">Snacks</h1>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/brownies.jpg" class="card-img-top" alt="Brownies" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Brownies</h5>
+                                            <p class="card-text">$2.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/pretzels.jpg" class="card-img-top" alt="Pretzels" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pretzels</h5>
+                                            <p class="card-text">$1.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/lays.jpg" class="card-img-top" alt="Lays Chips" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lays Potato Chips</h5>
+                                            <p class="card-text">$1.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card shadow" style="width: 100%;">
+                                        <img src="stock_images/trailmix.jpg" class="card-img-top" alt="Trail Mix" style="height: 160px; object-fit:scale-down">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Trail Mix</h5>
+                                            <p class="card-text">$0.99</p>
+                                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DRINK MENU -->
+                        <div class="drink-menu">
+                            <h1 style="margin-left: 1rem;">Drinks</h1>
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="card shadow" style="width: 100%;">
                                         <img src="stock_images/coke.jpg" class="card-img-top" alt="Coca Cola" style="height: 160px; object-fit:scale-down">
                                         <div class="card-body">
                                             <h5 class="card-title">Coca Cola</h5>
-                                            <p class="card-text">$1.99</p>
+                                            <p class="card-text">$2.49</p>
                                             <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                         </div>
                                     </div>
@@ -80,7 +173,7 @@
                                         <img src="stock_images/dietcoke.png" class="card-img-top" alt="Diet Coke" style="height: 160px; object-fit:scale-down">
                                         <div class="card-body">
                                             <h5 class="card-title">Diet Coke</h5>
-                                            <p class="card-text">$1.99</p>
+                                            <p class="card-text">$2.49</p>
                                             <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                         </div>
                                     </div>
@@ -90,7 +183,7 @@
                                         <img src="stock_images/sprite.jpg" class="card-img-top" alt="Sprite" style="height: 160px; object-fit:scale-down">
                                         <div class="card-body">
                                             <h5 class="card-title">Sprite</h5>
-                                            <p class="card-text">$1.99</p>
+                                            <p class="card-text">$2.49</p>
                                             <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                         </div>
                                     </div>
@@ -100,7 +193,7 @@
                                         <img src="stock_images/fanta.jpg" class="card-img-top" alt="Fanta" style="height: 160px; object-fit:scale-down">
                                         <div class="card-body">
                                             <h5 class="card-title">Fanta</h5>
-                                            <p class="card-text">$1.99</p>
+                                            <p class="card-text">$2.49</p>
                                             <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
                                         </div>
                                     </div>
@@ -108,13 +201,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="shopping-cart-bg mt-4 mt-md-0 p-4 bg-light rounded shadow" style="min-height: 300px;">
-                            <h4 class="mb-3 font-weight-bold text-center">Shopping Cart</h4>
-                            <div class="your-cart"></div>
-                            <div class="checkout-btn">
-                                <button class="btn btn-primary checkout-btn">Checkout</button>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="shopping-cart-bg shopping-cart-fixed p-4 bg-light rounded shadow">
+                        <h4 class="mb-3 font-weight-bold text-center">Shopping Cart</h4>
+                        <div class="your-cart"></div>
+                        <div class="checkout-btn">
+                            <button class="btn btn-primary checkout-btn">Checkout</button>
                         </div>
                     </div>
                 </div>
