@@ -4,11 +4,11 @@ Use this to keep track of where we are
 
 TODO:
 - Entertainment page (Natalie)
-- Flight info (Marielle)
 - Profile (Preston)
 - Shopping (Shayne)
 - Travel Tips (Preston)
-- Dashboard (??)
+- Dashboard (Marielle)
+- Invoice ?
 
 NEED FIXED:
 - Possibly shared/styles.css
@@ -18,3 +18,4 @@ FINISHED:
 - Feedback
 - Help page
 - Login
+- Flight info
