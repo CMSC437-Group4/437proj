@@ -69,5 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    updateCartDisplay();
+    // nice and smooth scroll to menu sections
+    document.querySelector('#meals button').addEventListener('click', function() {
+        document.querySelector('.meal-menu').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.querySelector('#snacks button').addEventListener('click', function() {
+        document.querySelector('.snack-menu').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.querySelector('#drinks button').addEventListener('click', function() {
+        document.querySelector('.drink-menu').scrollIntoView({ behavior: 'smooth' });
+    });
 });

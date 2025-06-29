@@ -1,14 +1,10 @@
-.content{
-    /* height: 100vh; /* covers full screen w/ navbar */
-    /* background-color: #B5B682; */
-}
 .category-menu{
     list-style: none;
     display: flex;
     justify-content: center;
 }
 .category-menu button{
-    margin: 2rem;
+    margin: 1rem;
     display: inline-block;
     padding: 15px 25px;
     font-size: 16px;
