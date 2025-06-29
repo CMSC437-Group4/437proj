@@ -1,0 +1,52 @@
+[
+    { 
+        "album" : "Thriller",
+        "artist" : "Michael Jackson",
+        "release year" : "1982",
+        "duration" : "42",
+        "cover" : "albumCovers/Thriller"
+    },
+    { 
+        "album" : "Blond",
+        "artist" : "Frank Ocean",
+        "release year" : "2016",
+        "duration" : "60",
+        "cover" : "albumCovers/Blond"
+    },
+    { 
+        "album" : "Nevermind",
+        "artist" : "Nirvana",
+        "release year" : "1991",
+        "duration" : "42",
+        "cover" : "albumCovers/Nevermind"
+    },
+    { 
+        "album" : "Rumours",
+        "artist" : "Fleetwood Mac",
+        "release year" : "1977",
+        "duration" : "39",
+        "cover" : "albumCovers/Rumours"
+    },
+    { 
+        "album" : "Back to Black",
+        "artist" : "Amy Winehouse",
+        "release year" : "2006",
+        "duration" : "58",
+        "cover" : "albumCovers/Back_To_Black"
+    },
+    { 
+        "album" : "London Calling",
+        "artist" : "The Clash",
+        "release year" : "1979",
+        "duration" : "65",
+        "cover" : "albumCovers/London_Calling"
+    },
+    { 
+        "album" : "Good kid, M.A.A.D City",
+        "artist" : "Kendrick Lamar",
+        "release year" : "2012",
+        "duration" : "68",
+        "cover" : "albumCovers/Good_Kid"
+    }
+
+]
