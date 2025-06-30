@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Entertainment</title>
+        <link rel="stylesheet" href="../shared/styles.css">
+        <link rel="stylesheet" href="entertainment.css">
+    </head>
+    <body>
+        <div class="entertainment-container">
+            <div class="top-bar">
+            <div class="search-container">
+                <img src="search.png" alt="Search Icon" id="searchIcon" />
+                <input type="text" id="searchInput" />
+                <button id="searchButton">Search</button>
+            </div>
+            <div class="category-buttons">
+                <button id="filter-button" class="filter-button">Filter</button>
+                <button class="category-btn">Movies</button>
+                <button class="category-btn">TV</button>
+                <button class="category-btn">Music</button>
+            </div>
+            </div>
+            <h2 class="movies-label">Movies:</h2>
+            <div class="movie-container"></div>
+            <h2 class="shows-label">TV Shows:</h2>
+            <div class="shows-container"></div>
+            <h2 class="music-label">Music:</h2>
+            <div class="music-container"></div>
+        </div>
+        <script src="entertainment.js"></script>
+    </body>
+
+</html>
