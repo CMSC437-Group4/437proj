@@ -5,7 +5,6 @@ Use this to keep track of where we are
 TODO:
 - Entertainment page (Natalie)
 - Profile (Preston)
-- Shopping (Shayne)
 - Travel Tips (Preston)
 - Dashboard (Marielle)
 - Invoice ?
@@ -19,3 +18,4 @@ FINISHED:
 - Help page
 - Login
 - Flight info
+- Shopping
