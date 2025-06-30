@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destination Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Destination Guide</h2>
+
+    <div id="destinationStatus"></div>
+
+    <div class="filters">
+      <label>
+        Category:
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="museum">Museums</option>
+          <option value="restaurant">Restaurants</option>
+        </select>
+      </label>
+
+      <label>
+        Sort by:
+        <select id="sortFilter">
+          <option value="distance">Distance</option>
+          <option value="popularity">Popularity</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="attractionsList"></div>
+  </div>
+
+  <script src="attractions.js"></script>
+</body>
+</html>
