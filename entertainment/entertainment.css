@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
 }
 .entertainment-container{
-    max-width: 40em;
+    max-width: 45em;
     background: #28666E;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -26,26 +26,49 @@ body {
 }
 .category-btn{
     color: white;
-    background-color:#28666E ;
+    background-color: #28666E;
     border: none;
     cursor: pointer;
     font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .category-btn:hover{
     text-decoration: underline;
 }
-.filter-button{
-    padding: 10px 15px;
-    font-size: 14px;
-    background-color:#486b70 ;
-    color: #FEDC97;
-    cursor: pointer;
+.bookmark-btn {
+    background: #FEDC97;
     border: none;
+    font-size: .75em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    margin-left: auto;
+    color: #28666E;
+    font-weight: bold;
 }
-.movie-container{ /*multiple movies*/
+
+.bookmark-btn:hover {
+    color: #c1620f ;
+}
+.section{
+    margin-top: 30px;
+}
+.section-label{
+    font-size: 22px;
+    font-weight: bold;
+    color: #FEDC97;
+    margin-bottom: 10px;
+}
+.card-row{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    padding-bottom: 10px;
+}
+
+.movie-container{ /*multiple movies*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 20px;
 }
 .movies-label {
@@ -60,6 +83,7 @@ body {
     border-radius: 7px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
     width: 120px;
+    margin-left: 10px;
 }
 .movie-card:hover{
     cursor: pointer;
@@ -91,6 +115,7 @@ body {
     border-radius: 7px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
     width: 120px;
+    margin-left: 10px;
 }
 .shows-card:hover{
     cursor: pointer;
@@ -122,6 +147,7 @@ body {
     border-radius: 7px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
     width: 120px;
+    margin-left: 10px;
 }
 .music-card:hover{
     cursor: pointer;
@@ -165,6 +191,8 @@ body {
     color: #28666E;
     border: none;
     cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
 }
 
 #searchButton:hover{
@@ -176,4 +204,5 @@ body {
     text-align: center;
     
 }
+
 
