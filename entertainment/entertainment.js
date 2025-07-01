@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
 
-    const bookmarkBtn = document.getElementById('bookmarkBtn');
     const bookmarked = document.getElementById('bookmarkedBtn');
 
     const movieBtn = document.getElementById('movieBtn');
@@ -71,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = movie.poster;
             img.alt = movie.title + " poster";
 
-            const title = document.createElement('h3'); //h3 due to semantic meaning
+            const title = document.createElement('h3'); 
             title.className = 'movie-title';
             title.textContent = movie.title; //inserts movie title into h3
 
@@ -131,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
             bookmarkBtn.className = 'bookmark-btn';  
 
             bookmarkBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); // prevent card toggle
+                e.stopPropagation(); 
                 addBookmark(movie, 'movie');
             });
 
@@ -157,9 +156,9 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = show.poster;
             img.alt = show.title + " poster";
 
-            const title = document.createElement('h3'); //h3 due to semantic meaning
+            const title = document.createElement('h3'); 
             title.className = 'shows-title';
-            title.textContent = show.title; //inserts movie title into h3
+            title.textContent = show.title; 
 
             const details = document.createElement('div');
             details.className = 'shows-details';
@@ -242,9 +241,9 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = music.cover;
             img.alt = music.title + " cover";
 
-            const title = document.createElement('h3'); //h3 due to semantic meaning
+            const title = document.createElement('h3'); 
             title.className = 'music-title';
-            title.textContent = music.title; //inserts movie title into h3
+            title.textContent = music.title; 
 
             const details = document.createElement('div');
             details.className = 'music-details';
