@@ -221,14 +221,14 @@ document.addEventListener('DOMContentLoaded', function() {
             title.textContent = show.title;
 
             if (!isGuest) {
-            const bookmarkBtn = document.createElement('button');
-            bookmarkBtn.textContent = 'Bookmark';
-            bookmarkBtn.className = 'bookmark-btn'; 
-
-            bookmarkBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); 
-                addBookmark(show, 'show');
-            });
+                const bookmarkBtn = document.createElement('button');
+                bookmarkBtn.textContent = 'Bookmark';
+                bookmarkBtn.className = 'bookmark-btn'; 
+    
+                bookmarkBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); 
+                    addBookmark(show, 'show');
+                });
             card.appendChild(bookmarkBtn);}
 
             card.appendChild(img);
@@ -388,6 +388,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function addBookmark(item, type) { //type refers to content category; function adds content to bookmarked page
          const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+         const alreadyBookmarked = bookmarks.some(b => b.title === item.title && b.type === type);
+        if (alreadyBookmarked) {
+            alert('This item is already bookmarked!');
+            return;
+        }
          bookmarks.push({ ...item, type });
          localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
