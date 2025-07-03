@@ -18,8 +18,7 @@
   </script>
   <div class="profilePage-container">
     <div class="profile-header">
-
-        <div class="profile-left">
+      <div class="profile-left">
         <img src="icon.jpg" alt="User Profile Picture" class="profile-pic">
         <h1 class="profile-name">John Doe</h1>
         </div>
@@ -29,6 +28,14 @@
             <h2 class="lang-label">Language:</h2>
             <h3 class="language">English</h3>
         </div>
+        <div class = "membership-section">
+            <h2 class="memb-label">Membership Status:</h2>
+            <h3 class="membership">Gold</h3>
+        </div>
+        <div class = "miles-section">
+            <h2 class="miles-label">Miles Flown:</h2>
+            <h3 class="miles">83,500</h3>
+        </div>
         </div>
 
   </div>
@@ -37,19 +44,38 @@
         <h2 class="email-label">E-mail address:</h2>
         <h3 class="email">johndooe5@gmail.com</h3>
     </div>
-    <h2>Preferences:</h2>
-
+    <div class="recent-flights">
+        <h2>Recent Flights:</h2>
+        <div class="flight">
+            <span class="route">LAX → JFK</span>
+            <span class="date">June 15, 2025</span>
+        </div>
+        <div class="flight">
+            <span class="route">SFO → ORD</span>
+            <span class="date">May 28, 2025</span>
+        </div>
+        <div class="flight">
+            <span class="route">ATL → MIA</span>
+            <span class="date">May 5, 2025</span>
+        </div>
+        <div class="parental-controls-section">
+            <h2 class="parental-label">Parental Controls:</h2>
+            <label class="switch">
+                <input type="checkbox" id="parental-toggle" checked>
+                <span class="slider round"></span>
+            </label>
+                <span id="parental-status-text" class="toggle-status">Enabled</span>
+        </div>
+    </div>
+  </div>    
   </div>
 </div>
-
-  
-    
 
   <!-- Help Button -->
   <a href="../help/help.html" class="help-button" title="Flight Attendant Help">
       <img src="../assets/help.png" alt="Help">
   </a>
   <!-- JavaScript for form handling -->
-  <script src="profile.js"></script>
+  <script src="profilePage.js"></script>
 </body>
 </html>
