@@ -3,19 +3,16 @@
 Use this to keep track of where we are
 
 TODO:
-- Entertainment page (Natalie)
-- Profile (Preston)
-- Travel Tips (Preston)
-- Dashboard (Marielle)
 - Invoice ?
 
-NEED FIXED:
-- Possibly shared/styles.css
-
 FINISHED:
+- Profile (Preston)
+- Entertainment page (Natalie)
+- Travel Tips (Preston)
+- Dashboard (Marielle)
 - Navbar
-- Feedback
 - Help page
 - Login
 - Flight info
+- Feedback
 - Shopping

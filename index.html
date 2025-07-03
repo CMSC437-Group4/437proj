@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+        <link rel="stylesheet" href="../shared/styles.css">
+        <link rel="stylesheet" href="login.css">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="common.js" type="text/babel"></script>
+    </head>
+    <body>
+        <!-- Note, this was after we already made our HTML pages -->
+        <!-- So...this is what I got to make up for that -->
+        <div id="root"></div>
+        <script type="text/babel">
+            const { useEffect } = React;
+            function MyApp() {
+                useEffect(() => {
+                    window.location.href = "./login/login.html";
+                }, []);
+                return null;
+            }
+            const container = document.getElementById('root');
+            const root = ReactDOM.createRoot(container);
+            root.render(<MyApp />);
+        </script>
+    </body>
+</html>

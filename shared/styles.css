@@ -154,11 +154,13 @@ body {
     font-size: 1.2rem;
     width: 40px;
     text-align: center;
+    color: #fff !important;
 }
 
 .nav-link span {
-    opacity: 0;                             /* Hidden when collapsed */
-    transition: opacity 0.3s ease 0.1s;     /* Fade in with delay */
+    color: #fff !important; 
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;
 }
 
 /* Show text labels when expanded */
