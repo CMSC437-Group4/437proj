@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!isValid) return;
 
-        // Now check localStorage for user data
+        // Check localStorage for user data
         const emailKey = `user-${email.value.toLowerCase().trim()}`;  // normalize email key
         const userDataJson = localStorage.getItem(emailKey);
 
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loginBtn.textContent = 'Logging in...';
         loginBtn.disabled = true;
 
-        // Save current user in localStorage if needed
+        // Save current user in localStorage
         localStorage.setItem('currentUser', email.value.toLowerCase().trim());
 
         setTimeout(function() {
