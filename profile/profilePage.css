@@ -1,10 +1,12 @@
 body {
+    background-color: #7C9885;
     color: white;
+    padding: 20px;
     min-height: 100vh;
 }
 .profilePage-container{
     max-width: 45em;
-    background: #7C9885;
+    background: #28666E;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
@@ -43,7 +45,6 @@ body {
 
 .lang-label{
     font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0 0 0.5em 0;
 }
 .language{
@@ -51,7 +52,6 @@ body {
     background-color: #FEDC97;
     color: #28666E;
     border: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
     margin: 0;
 }
@@ -62,16 +62,136 @@ body {
 }
 .email-label{
     font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0 0 0.5em 0;
 }
 .email{
-     padding: 10px 20px;
+    padding: 10px 20px;
     background-color: #FEDC97;
     color: #28666E;
     border: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
     margin: 0;
     max-width: 300px;
+}
+.memb-label{
+    font-size: 16px;
+    margin: 0 0 0.5em 0;
+}
+.membership{
+    padding: 10px 20px;
+    background-color: gold;
+    color: #28666E;
+    border: none;
+    font-weight: bolder;
+    margin: 0;
+}
+.miles-label{
+    font-size: 16px;
+    margin: 0 0 0.5em 0;
+}
+.miles{
+    padding: 10px 20px;
+    background-color: #FEDC97;
+    color: #28666E;
+    border: none;
+    font-weight: bolder;
+    margin: 0;
+}
+.recent-flights {
+  margin-top: 1em;
+  margin-left: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.flight {
+  background-color: #033F63;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.route {
+  font-size: 1em;
+}
+
+.date {
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+.parental-controls-section {
+  margin-top: 2em;
+  margin-left: 5em;
+}
+
+.parental-label {
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 0.5em;
+}
+
+.parental-status {
+  padding: 10px 20px;
+  background-color: #FEDC97;
+  color: #28666E;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #033F63;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #67c0f8;
+;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+.toggle-status {
+  margin-left: 12px;
+  font-weight: bold;
+  vertical-align: middle;
 }
