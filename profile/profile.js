@@ -37,5 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
     messageDiv.style.color = 'green';
 
     form.reset();
+
+    //redirects to login page after 2 seconds
+    setTimeout(() => {
+      window.location.href = 'login.html';
+    }, 2000);
   });
 });
+
