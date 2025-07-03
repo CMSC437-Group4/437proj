@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (Object.keys(cart).length === 0) {
             cartContainer.innerHTML = '<p class="text-center text-muted">Cart is empty.</p>';
             if (checkoutBtn) checkoutBtn.disabled = true;
-            // Remove credit card form if cart is empty
+            // remove credit card form if cart is empty
             const ccForm = document.getElementById('cart-cc-form');
             if (ccForm) ccForm.remove();
             return;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         totalDiv.innerHTML = `Total: $${total.toFixed(2)}`;
         cartContainer.appendChild(totalDiv);
 
-        // Credit Card Form
+        // credit card form
         const ccForm = document.createElement('form');
         ccForm.id = 'cart-cc-form';
         ccForm.innerHTML = `
@@ -75,14 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Enable/disable checkout button based on credit card fields
-        setTimeout(() => { // Wait for DOM to update
+        // enable/disable checkout button based on credit card fields
+        setTimeout(() => { 
             const ccNumber = document.getElementById('cc-number');
             const ccExp = document.getElementById('cc-exp');
             const ccCvc = document.getElementById('cc-cvc');
             const ccName = document.getElementById('cc-name');
             const checkoutBtn = document.querySelector('.checkout-btn .checkout-btn');
             function validateCC() {
+                // mmmm regex
                 const valid =
                     ccNumber.value.trim().length === 16 &&
                     /^\d{16}$/.test(ccNumber.value.trim()) &&
