@@ -63,3 +63,14 @@ button:hover {
   margin-top: 15px;
   text-align: center;
 }
+.login-link{
+  color: white;
+}
+.login-link a { /*link*/
+  color: #FEDC97;
+  text-decoration: none;
+  font-weight: bold;
+}
+.login-link a:hover {
+  text-decoration: underline;
+}
