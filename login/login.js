@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isValid) return;
 
         // Check localStorage for user data
-        const emailKey = `user-${email.value.toLowerCase().trim()}`;  // normalize email key
+        const emailKey = `user-${email.value.toLowerCase().trim()}`;  
         const userDataJson = localStorage.getItem(emailKey);
 
         if (!userDataJson) {
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Save current user in localStorage
         localStorage.setItem('currentUser', email.value.toLowerCase().trim());
+        localStorage.setItem('isGuest', 'false');  // mark as logged-in
 
         setTimeout(function() {
             window.location.href = '../home/index.html';
@@ -93,6 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Guest button
     if (guestBtn) {
       guestBtn.addEventListener('click', function() {
+          localStorage.setItem('isGuest', 'true'); // mark as guest user
+          localStorage.removeItem('currentUser'); 
           window.location.href = '../home/index.html';
       });
     }
