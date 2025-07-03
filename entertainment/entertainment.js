@@ -11,10 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const movieContainer = document.querySelector('.movie-container');
     const showContainer = document.querySelector('.shows-container');
     const musicContainer = document.querySelector('.music-container');
-    
+
     const popularRow = document.querySelector('.popular-row');
     const continueRow = document.querySelector('.continue-row');
     const recommendedRow = document.querySelector('.recommended-row'); 
+
+    const isGuest = localStorage.getItem('isGuest') === 'true';
+    if (isGuest) { // won't display bookmarked tab option if the user is a guest
+        bookmarked.style.display = 'none';
+    }
 
     let movies = [];
     let shows = [];
@@ -70,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = movie.poster;
             img.alt = movie.title + " poster";
 
-            const title = document.createElement('h3'); 
+            const title = document.createElement('h3'); //h3 due to semantic meaning
             title.className = 'movie-title';
             title.textContent = movie.title; //inserts movie title into h3
 
@@ -94,18 +99,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
 
-            const bookmarkBtn = document.createElement('button');
-            bookmarkBtn.textContent = 'Bookmark';
-            bookmarkBtn.className = 'bookmark-btn'; 
+            if (!isGuest) {
+                const bookmarkBtn = document.createElement('button');
+                bookmarkBtn.textContent = 'Bookmark';
+                bookmarkBtn.className = 'bookmark-btn'; 
 
-            bookmarkBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); // prevent card toggle
-                addBookmark(movie, 'movie');
-            });
+                bookmarkBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // prevent card toggle
+                    addBookmark(movie, 'movie');
+                });
+
+                card.appendChild(bookmarkBtn);}
 
             card.appendChild(img);
             card.appendChild(title);
-            card.appendChild(bookmarkBtn);
             card.appendChild(details);
             movieContainer.appendChild(card);
 
@@ -125,18 +132,19 @@ document.addEventListener('DOMContentLoaded', function() {
             title.className = 'movie-title';
             title.textContent = movie.title;
 
-            const bookmarkBtn = document.createElement('button');
-            bookmarkBtn.textContent = 'Bookmark';
-            bookmarkBtn.className = 'bookmark-btn';  
+            if (!isGuest) {
+                const bookmarkBtn = document.createElement('button');
+                bookmarkBtn.textContent = 'Bookmark';
+                bookmarkBtn.className = 'bookmark-btn';  
 
-            bookmarkBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); 
-                addBookmark(movie, 'movie');
-            });
+                bookmarkBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // prevent card toggle
+                    addBookmark(movie, 'movie');
+                });
+                card.appendChild(bookmarkBtn)}
 
             card.appendChild(img);
             card.appendChild(title);
-            card.appendChild(bookmarkBtn)
             rowElement.appendChild(card);
         });
     }   
@@ -156,9 +164,9 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = show.poster;
             img.alt = show.title + " poster";
 
-            const title = document.createElement('h3'); 
+            const title = document.createElement('h3'); //h3 due to semantic meaning
             title.className = 'shows-title';
-            title.textContent = show.title; 
+            title.textContent = show.title; //inserts movie title into h3
 
             const details = document.createElement('div');
             details.className = 'shows-details';
@@ -180,18 +188,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
 
-            const bookmarkBtn = document.createElement('button');
-            bookmarkBtn.textContent = 'Bookmark';
-            bookmarkBtn.className = 'bookmark-btn';
+            if (!isGuest) {
+                const bookmarkBtn = document.createElement('button');
+                bookmarkBtn.textContent = 'Bookmark';
+                bookmarkBtn.className = 'bookmark-btn';
 
-            bookmarkBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); 
-                addBookmark(show, 'show');
-            });
+                bookmarkBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); 
+                    addBookmark(show, 'show');
+                });
+                card.appendChild(bookmarkBtn);}
 
             card.appendChild(img);
             card.appendChild(title);
-            card.appendChild(bookmarkBtn);
             card.appendChild(details);
             showContainer.appendChild(card);
             
@@ -211,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title.className = 'shows-title';
             title.textContent = show.title;
 
+            if (!isGuest) {
             const bookmarkBtn = document.createElement('button');
             bookmarkBtn.textContent = 'Bookmark';
             bookmarkBtn.className = 'bookmark-btn'; 
@@ -219,10 +229,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.stopPropagation(); 
                 addBookmark(show, 'show');
             });
+            card.appendChild(bookmarkBtn);}
 
             card.appendChild(img);
             card.appendChild(title);
-            card.appendChild(bookmarkBtn);
             rowElement.appendChild(card);
         });
     }
@@ -241,9 +251,9 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = music.cover;
             img.alt = music.title + " cover";
 
-            const title = document.createElement('h3'); 
+            const title = document.createElement('h3'); //h3 due to semantic meaning
             title.className = 'music-title';
-            title.textContent = music.title; 
+            title.textContent = music.title; //inserts movie title into h3
 
             const details = document.createElement('div');
             details.className = 'music-details';
@@ -263,18 +273,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
 
-            const bookmarkBtn = document.createElement('button');
-            bookmarkBtn.textContent = 'Bookmark';
-            bookmarkBtn.className = 'bookmark-btn'; 
+            if (!isGuest) {
+                const bookmarkBtn = document.createElement('button');
+                bookmarkBtn.textContent = 'Bookmark';
+                bookmarkBtn.className = 'bookmark-btn'; 
 
-            bookmarkBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                addBookmark(music, 'music');
-            });
+                bookmarkBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    addBookmark(music, 'music');
+                });
+                card.appendChild(bookmarkBtn);}
 
             card.appendChild(img);
             card.appendChild(title);
-            card.appendChild(bookmarkBtn);
             card.appendChild(details);
             musicContainer.appendChild(card);
             
@@ -294,18 +305,19 @@ document.addEventListener('DOMContentLoaded', function() {
             title.className = 'music-title';
             title.textContent = music.title;
 
-            const bookmarkBtn = document.createElement('button');
-            bookmarkBtn.textContent = 'Bookmark';
-            bookmarkBtn.className = 'bookmark-btn'; 
+            if (!isGuest) {
+                const bookmarkBtn = document.createElement('button');
+                bookmarkBtn.textContent = 'Bookmark';
+                bookmarkBtn.className = 'bookmark-btn'; 
 
-            bookmarkBtn.addEventListener('click', function(e) {
-                e.stopPropagation(); 
-                addBookmark(music, 'music');
-            });
+                bookmarkBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); 
+                    addBookmark(music, 'music');
+                });
+                card.appendChild(bookmarkBtn);}
 
             card.appendChild(img);
             card.appendChild(title);
-            card.appendChild(bookmarkBtn);
             rowElement.appendChild(card);
         });
     }
