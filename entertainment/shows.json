@@ -5,7 +5,7 @@
     "cast": ["Millie Bobby Brown", "Finn Wolfhard", "Noah Schnapp"],
     "number of episodes":"34",
     "rating": "TV-14",
-    "poster": "entertainment/showPosters/Stranger_Things"
+    "poster": "showPosters/Stranger_Things"
     },
     {"title" : "Succession",
     "director": "Jesse Armstrong",
@@ -13,7 +13,7 @@
     "cast": ["Jeremy Strong", "Sarah Snook", "Kieran Culkin"],
     "number of episodes":"39",
     "rating": "R",
-    "poster": "entertainment/showPosters/Succession"
+    "poster": "showPosters/Succession"
     },
     {"title" : "The Office",
     "director": "Ricky Gervais",
@@ -21,7 +21,7 @@
     "cast": ["Steve Carrell", "John Krasinski", "Jenna Fischer"],
     "number of episodes":"201",
     "rating": "TV-14",
-    "poster": "entertainment/showPosters/The_Office"
+    "poster": "showPosters/The_Office"
     },
     {"title" : "The Sopranos",
     "director": "David Chase",
@@ -29,7 +29,7 @@
     "cast": ["James Gandolfini", "Michael Imperioli", "Lorraine Bracco"],
     "number of episodes":"86",
     "rating": "R",
-    "poster": "entertainment/showPosters/The_Sopranos"
+    "poster": "showPosters/The_Sopranos"
     },
     {"title" : "Family Guy",
     "director": "Seth McFarlane",
@@ -37,7 +37,7 @@
     "cast": ["Seth McFarlane", "Alex Borstein", "Seth Green"],
     "number of episodes":"435",
     "rating": "R",
-    "poster": "entertainment/showPosters/Family_Guy"
+    "poster": "showPosters/Family_Guy"
     },
     {"title" : "Phineas and Ferb",
     "director": "Dan Povenmire and Jeff Marsh",
@@ -45,6 +45,6 @@
     "cast": ["Dan Povenmire", "Vincent Martella", "Ashley Tisdale"],
     "number of episodes":"143",
     "rating": "TV-G",
-    "poster": "entertainment/showPosters/Phineas_And_Ferb"
+    "poster": "showPosters/Phineas_And_Ferb"
     }
 ]
