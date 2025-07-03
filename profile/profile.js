@@ -1,49 +1,41 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-const app = express();
-const port = 3000;
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('registrationForm');
+  const messageDiv = document.getElementById('message');
 
-// Simulated in-memory database
-const users = new Map();
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-app.use(bodyParser.json());
-app.use(express.static(__dirname)); // Serve HTML and CSS
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
 
-app.post('/register', (req, res) => {
-  const { email, password } = req.body;
+    if (password.length < 8) {
+      messageDiv.textContent = 'Password must be at least 8 characters.';
+      messageDiv.style.color = 'red';
+      return;
+    }
 
-  if (users.has(email)) {
-    res.json({ success: false, message: 'Account exists. Forgot password?' });
-  } else if (password.length < 8) {
-    res.json({ success: false, message: 'Password too weak. Use at least 8 characters.' });
-  } else {
-    users.set(email, { password, preferences: {} }); // Store preferences if needed
-    res.json({ success: true, message: 'Account created successfully. Preferences saved for future sessions.' });
-  }
-});
+    const existing = localStorage.getItem(`user-${email}`);
+    if (existing) {
+      messageDiv.textContent = 'Account already exists. Forgot password?';
+      messageDiv.style.color = 'red';
+      return;
+    }
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
-    
-const form = document.getElementById('registrationForm');
-const messageDiv = document.getElementById('message');
+    const userData = {
+      firstName,
+      lastName,
+      email,
+      password
+    };
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+    localStorage.setItem(`user-${email}`, JSON.stringify(userData));
+    localStorage.setItem('currentUser', email);
 
-  const response = await fetch('/register', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ email, password })
+    messageDiv.textContent = 'Account created successfully.';
+    messageDiv.style.color = 'green';
+
+    form.reset();
   });
-
-  const data = await response.json();
-  messageDiv.textContent = data.message;
-  messageDiv.style.color = data.success ? 'green' : 'red';
 });
