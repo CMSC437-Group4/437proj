@@ -1,4 +1,3 @@
-// Wait for DOM to be fully loaded before executing JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Get form elements
     const form = document.getElementById('loginForm');
@@ -47,14 +46,37 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
 
-        // If valid, proceed with login
-        if (isValid) {
-            loginBtn.textContent = 'Logging in...';
-            loginBtn.disabled = true;
-            setTimeout(function() {
-                window.location.href = '../home/index.html';
-            }, 1000);
+        if (!isValid) return;
+
+        // Now check localStorage for user data
+        const emailKey = `user-${email.value.toLowerCase().trim()}`;  // normalize email key
+        const userDataJson = localStorage.getItem(emailKey);
+
+        if (!userDataJson) {
+            emailError.textContent = 'Account does not exist. Please register.';
+            email.classList.add('error');
+            return;
         }
+
+        const userData = JSON.parse(userDataJson);
+
+        // Check password
+        if (userData.password !== password.value) {
+            passwordError.textContent = 'Incorrect password';
+            password.classList.add('error');
+            return;
+        }
+
+        // Successful login
+        loginBtn.textContent = 'Logging in...';
+        loginBtn.disabled = true;
+
+        // Save current user in localStorage if needed
+        localStorage.setItem('currentUser', email.value.toLowerCase().trim());
+
+        setTimeout(function() {
+            window.location.href = '../home/index.html';
+        }, 1000);
     });
 
     // Clear errors when typing
@@ -69,7 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Guest button
-    guestBtn.addEventListener('click', function() {
-        window.location.href = '../home/index.html';
-    });
+    if (guestBtn) {
+      guestBtn.addEventListener('click', function() {
+          window.location.href = '../home/index.html';
+      });
+    }
 });
