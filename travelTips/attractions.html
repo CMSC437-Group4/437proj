@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Destination Guide</title>
+  <link rel="stylesheet" href="../shared/styles.css">
   <link rel="stylesheet" href="attractions.css">
 </head>
 <body>
+  <div id="navbar-container"></div>
+  <script>
+      fetch('../shared/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
   <div class="container">
     <h2>Destination Guide</h2>
 
@@ -33,6 +42,10 @@
     <div id="attractionsList"></div>
   </div>
 
+  <!-- Help Button -->
+  <a href="../help/help.html" class="help-button" title="Flight Attendant Help">
+      <img src="../assets/help.png" alt="Help">
+  </a>
   <script src="attractions.js"></script>
 </body>
 </html>

@@ -8,6 +8,14 @@
   <link rel="stylesheet" href="profilePage.css">
 </head>
 <body>
+  <div id="navbar-container"></div>
+  <script>
+      fetch('../shared/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
   <div class="profilePage-container">
     <div class="profile-header">
 
@@ -37,6 +45,10 @@
   
     
 
+  <!-- Help Button -->
+  <a href="../help/help.html" class="help-button" title="Flight Attendant Help">
+      <img src="../assets/help.png" alt="Help">
+  </a>
   <!-- JavaScript for form handling -->
   <script src="profile.js"></script>
 </body>

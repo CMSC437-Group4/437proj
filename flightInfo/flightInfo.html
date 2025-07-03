@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="flightInfo.css">
 </head>
 <body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('../shared/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
     <!-- Main container for all flight information -->
     <div class="flight-container">
         <h1>Flight Information</h1>
@@ -106,5 +114,8 @@
         </div>
     </div>
     <script src="flightInfo.js"></script>
+    <a href="../help/help.html" class="help-button" title="Flight Attendant Help">
+        <img src="../assets/help.png" alt="Help">
+    </a>
 </body>
 </html>

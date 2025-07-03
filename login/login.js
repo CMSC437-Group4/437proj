@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loginBtn.textContent = 'Logging in...';
             loginBtn.disabled = true;
             setTimeout(function() {
-                window.location.href = '../index.html';
+                window.location.href = '../home/index.html';
             }, 1000);
         }
     });
@@ -70,6 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Guest button
     guestBtn.addEventListener('click', function() {
-        window.location.href = '../index.html';
+        window.location.href = '../home/index.html';
     });
 });

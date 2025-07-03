@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="help.css">
 </head>
 <body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('../shared/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
     <!-- Main container for the entire component -->
     <div class="assistance-container">
         <h1>How can we help?</h1>

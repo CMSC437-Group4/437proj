@@ -8,6 +8,14 @@
         <link rel="stylesheet" href="entertainment.css">
     </head>
     <body>
+        <div id="navbar-container"></div>
+        <script>
+            fetch('../shared/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+        </script>
         <div class="entertainment-container">
             <div class="top-bar">
             <div class="search-container">
@@ -41,6 +49,10 @@
            <!--<h2 class="music-label">Music:</h2>-->
             <div class="music-container"></div>
         </div>
+        <!-- Help Button -->
+        <a href="../help/help.html" class="help-button" title="Flight Attendant Help">
+            <img src="../assets/help.png" alt="Help">
+        </a>
         <script src="entertainment.js"></script>
     </body>
 

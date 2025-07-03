@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="feedback.css">
 </head>
 <body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('../shared/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
     <!-- Main feedback container -->
     <div class="feedback-container">
         <h1>In-Flight Feedback</h1>
@@ -53,6 +61,10 @@
             Thank you! Your feedback has been submitted to the crew.
         </div>
     </div>
+    <!-- Help Button -->
+    <a href="../help/help.html" class="help-button" title="Flight Attendant Help">
+        <img src="../assets/help.png" alt="Help">
+    </a>
     <script src="feedback.js"></script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Pilot - Dashboard</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+    <script>
+        fetch('../shared/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+    </script>
+    <!-- Dashboard/Main Container -->
+    <div class="dashboard">
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <h1>Welcome Aboard!</h1>
+            <p>Flight AA123 • New York (JFK) to London (LHR) • Seat 23A</p>
+        </div>
+        <!-- Flight Status Section -->
+        <a href="../flightInfo/flightInfo.html" class="flight-status-container">
+            <img src="../assets/flightMap.jpeg" alt="Flight Path Map" class="flight-map">
+            <div class="flight-status-overlay">
+                <h2>Your Flight Status</h2>
+                <div class="status-metrics">
+                    <div class="metric">
+                        <div class="metric-value" id="altitude">36,000 ft</div>
+                        <div>Altitude</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="speed">540 mph</div>
+                        <div>Speed</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="temperature">-62°F</div>
+                        <div>Outside Temp</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value" id="time-remaining">4h 15m</div>
+                        <div>Time Remaining</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Quick Actions Section -->
+        <h2 style="color: white; margin-bottom: 20px; margin-top: 20px;">Quick Access</h2>
+        <div class="quick-actions">
+            <!-- Entertainment Card -->
+            <a href="../entertainment/entertainment.html" class="action-card">
+                <i class="fas fa-film"></i>
+                <h3>Entertainment</h3>
+                <p>100+ movies, shows and music</p>
+                <div class="card-preview">
+                    <img src="../assets/movie1.jpg" alt="Movie 1">
+                    <img src="../assets/movie2.jpg" alt="Movie 2">
+                    <img src="../assets/movie3.jpg" alt="Movie 3">
+                </div>
+            </a>
+            <!-- Food & Shopping Card -->
+            <a href="../shopping/shopping.html" class="action-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Food & Shopping</h3>
+                <p>Meals, snacks and drinks</p>
+                <div class="card-preview">
+                    <img src="../assets/food1.png" alt="Food 1">
+                    <img src="../assets/food2.png" alt="Food 2">
+                    <img src="../assets/food3.png" alt="Food 3">
+                </div>
+            </a>
+            <!-- Connect Card -->
+            <a href="../phone/phone.html" class="action-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Connect</h3>
+                <p>Wi-Fi and calling options</p>
+                <div class="icon-preview">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-message"></i>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </a>
+            <!-- Travel Tips Card -->
+            <a href="../travelTips/attractions.html" class="action-card">
+                <i class="fas fa-map"></i>
+                <h3>Travel Tips</h3>
+                <p>Helpful information for your journey</p>
+                <div class="icon-preview">
+                    <i class="fas fa-passport"></i>
+                    <i class="fas fa-suitcase"></i>
+                    <i class="fas fa-landmark"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Help Button -->
+    <a href="../help/help.html" class="help-button" title="Flight Attendant Help">
+        <img src="../assets/help.png" alt="Help">
+    </a>
+    <script src="index.js"></script>
+</body>
+</html>
