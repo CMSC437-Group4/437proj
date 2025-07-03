@@ -10,6 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="phone.js"></script>
     </head>
     <body>
         <div id="navbar-container"></div>
@@ -46,9 +47,9 @@
             <div class="phone-info-container ms-4">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <div class="rate">Rate: $2.5/min</div>
-                        <div class="duration">Duration: 4:22 mins</div>
-                        <div class="cost">Cost: $11.10</div>
+                        <div class="rate">Rate: $<span id="rateValue">2.5</span>/min</div>
+                        <div class="duration">Duration: <input id="durationInput" type="number" min="1" value="1" style="width:60px;"> mins</div>
+                        <div class="cost">Cost: $<span id="costValue">2.50</span></div>
                     </div>
                 </div>
                 <div class="payment-section mt-3">
@@ -66,11 +67,12 @@
                         <button class="btn btn-outline-secondary btn-sm">MASTERCARD</button>
                         <input type="text" class="form-control mt-2" placeholder="Ex: 1234 1234 1234 1234">
                         <div class="d-flex mt-2">
-                            <input type="text" class="form-control me-2" style="width:70px" placeholder="MM/YY">
-                            <input type="text" class="form-control" style="width:70px" placeholder="CW/CVC">
+                            <input type="text" class="form-control me-2" style="width:80px" placeholder="MM/YY">
+                            <input type="text" class="form-control" style="width:90px" placeholder="CW/CVC">
                         </div>
                     </div>
                 </div>
+                <button id="payNowBtn" class="btn btn-success mt-3" disabled>Pay Now</button>
             </div>
         </div>
         <!-- Help Button -->
