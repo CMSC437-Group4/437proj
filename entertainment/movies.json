@@ -5,7 +5,7 @@
     "cast": ["Cho Yeo-jeong", "Kang-ho Song", "Choi Woo-shik"],
     "duration":"132",
     "rating": "R",
-    "poster": "entertainment/moviePosters/Parasite.jpg"
+    "poster": "moviePosters/Parasite.jpg"
     },
     {"title" : "The Incredibles",
     "director": "Brad Bird",
@@ -13,7 +13,7 @@
     "cast": ["Craig T. Nelson", "Holly Hunter", "Sarah Vowell"],
     "duration":"123",
     "rating": "PG",
-    "poster": "entertainment/moviePosters/The_Incredibles.jpg"
+    "poster": "moviePosters/The_Incredibles.jpg"
     },
     {"title" : "The Graduate",
     "director": "Mike Nichols",
@@ -21,7 +21,7 @@
     "cast": ["Dustin Hoffman", "Anne Bancroft", "Katharine Ross"],
     "duration":"106",
     "rating": "PG",
-    "poster": "entertainment/moviePosters/The_Graduate.jpg"
+    "poster": "moviePosters/The_Graduate.jpg"
     },
     {"title" : "The Godfather",
     "director": "Francis Ford Coppola",
@@ -29,7 +29,7 @@
     "cast": ["Al Pacino", "Marlon Brando", "James Caan"],
     "duration":"175",
     "rating": "R",
-    "poster": "entertainment/moviePosters/The_Godfather.jpg"
+    "poster": "moviePosters/The_Godfather.jpg"
     },
     {"title" : "Freaky Friday",
     "director": "Mark Waters",
@@ -37,7 +37,7 @@
     "cast": ["Lindsay Lohan", "Jamie Lee Curtis", "Chad Michael Murray"],
     "duration":"97",
     "rating": "PG",
-    "poster": "entertainment/moviePosters/Freaky_Friday.jpg"
+    "poster": "moviePosters/Freaky_Friday.jpg"
     },
     {"title" : "Get Out",
     "director": "Jordan Peele",
@@ -45,7 +45,7 @@
     "cast": ["Daniel Kaluuya", "Allison Williams", "Lakeith Stanfield"],
     "duration":"104",
     "rating": "R",
-    "poster": "entertainment/moviePosters/Get_Out.jpg"
+    "poster": "moviePosters/Get_Out.jpg"
     },
     {"title" : "La La Land",
     "director": "Damien Chazelle",
@@ -53,7 +53,7 @@
     "cast": ["Emma Stone", "Ryan Gosling", "J. K. Simmons"],
     "duration":"128",
     "rating": "PG-13",
-    "poster": "entertainment/moviePosters/La_la_Land.jpg"
+    "poster": "moviePosters/La_la_Land.jpg"
     },
     {"title" : "Wall-E",
     "director": "Andrew Stanton",
@@ -61,6 +61,6 @@
     "cast": ["Ben Burtt", "Andrew Stanton", "Elissa Knight"],
     "duration":"98",
     "rating": "G",
-    "poster" : "entertainment/moviePosters/WALL-E.jpg"
+    "poster" : "moviePosters/WALL-E.jpg"
     }
 ]
