@@ -38,10 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.reset();
 
-    //redirects to login page after 2 seconds
     setTimeout(() => {
-      window.location.href = 'login.html';
-    }, 2000);
+      window.location.href = '../login/login.html';
+    }, 1500);
   });
 });
 
