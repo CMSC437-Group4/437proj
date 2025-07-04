@@ -173,3 +173,17 @@ input {
         font-size: 2rem;
     }
 }
+.register-link p {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.register-link a {
+  color: #B5B682;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
