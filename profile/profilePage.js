@@ -18,10 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //loads information from localStorage
     const emailKey = localStorage.getItem('currentUser'); // email used as key suffix
-    if (!emailKey) return; // No user logged in
+    if (!emailKey) {
+        window.location.href = "register.html";
+        return;
+    } // No user logged in
 
     const userJson = localStorage.getItem(`user-${emailKey}`);
-    if (!userJson) return; // No user data found
+    if (!userJson) {
+        window.location.href = "register.html";
+        return;
+    }  // No user data found
 
     const userData = JSON.parse(userJson);
 

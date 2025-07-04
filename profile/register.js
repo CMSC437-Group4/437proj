@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('registrationForm');
   const messageDiv = document.getElementById('message');
+  const loginButton = document.getElementById('loginButton');
+
+  if (loginButton) {
+    loginButton.addEventListener('click', () => {
+      window.location.href = '../login/login.html';
+    });
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
